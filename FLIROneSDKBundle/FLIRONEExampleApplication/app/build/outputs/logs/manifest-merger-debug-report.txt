@@ -1,0 +1,186 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:2:1-50:12
+INJECTED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:2:1-50:12
+INJECTED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:2:1-50:12
+INJECTED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:2:1-50:12
+MERGED from [:flironesdk:] /Users/weiminding/.gradle/caches/transforms-1/files-1.1/flironesdk.aar/90151ebbce1de68aafc07928a3680fb2/AndroidManifest.xml:2:1-19:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/weiminding/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/74f6c51a74819b5460b6cac3001b87e1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-v4:27.1.1] /Users/weiminding/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/c67344773e42ec8387c0aa9a468891ac/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /Users/weiminding/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/b24d8893fea576eedb13b3a4787fa00a/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/weiminding/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/b0be5c2c10c07f781fb924cadd4e90a6/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/weiminding/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/c834a55ceb1cdcf2b9de5eafd481b698/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/weiminding/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/2f3ffc0c4c4edc6a5bad561285ba4367/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/weiminding/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/1fe96e1bf3ab18975390be5c3ab464e8/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/weiminding/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/147dd9eb6ccf87c8871345d774a04ab5/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.1.1] /Users/weiminding/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/cc601b75eab0010b04d2100cc161021a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] /Users/weiminding/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/cc0c6069929476700ce3d9a2e079847e/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/weiminding/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/735e184c29a0af243896d4d45e14fce1/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/weiminding/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/aa36e3b2c9052c2025f38d5ac888dbf1/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/weiminding/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/0248bf5eee9b4667ee31203065573d14/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] /Users/weiminding/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/6f79e027358fe2f213cafdd7192f5000/AndroidManifest.xml:17:1-22:12
+INJECTED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:2:1-50:12
+INJECTED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:2:1-50:12
+INJECTED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:2:1-50:12
+	package
+		ADDED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:4:5-49
+		INJECTED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml
+		ADDED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:12:9-34
+		INJECTED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml
+	xmlns:tools
+		ADDED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:3:5-51
+	android:versionCode
+		INJECTED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml
+		ADDED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:11:9-32
+		INJECTED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:2:11-69
+application
+ADDED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:6:5-47:19
+MERGED from [:flironesdk:] /Users/weiminding/.gradle/caches/transforms-1/files-1.1/flironesdk.aar/90151ebbce1de68aafc07928a3680fb2/AndroidManifest.xml:14:5-17:19
+MERGED from [:flironesdk:] /Users/weiminding/.gradle/caches/transforms-1/files-1.1/flironesdk.aar/90151ebbce1de68aafc07928a3680fb2/AndroidManifest.xml:14:5-17:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /Users/weiminding/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/b24d8893fea576eedb13b3a4787fa00a/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /Users/weiminding/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/b24d8893fea576eedb13b3a4787fa00a/AndroidManifest.xml:9:5-20
+	android:label
+		ADDED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:9:9-41
+	android:versionName
+		ADDED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:12:9-34
+	android:versionCode
+		ADDED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:11:9-32
+	android:icon
+		ADDED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:8:9-43
+	android:allowBackup
+		ADDED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:7:9-35
+	android:theme
+		ADDED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:10:9-40
+activity#com.flir.flironeexampleapplication.EditorActivity
+ADDED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:13:9-23:20
+	android:screenOrientation
+		ADDED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:14:13-49
+	android:name
+		ADDED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:13:19-49
+intent-filter#action:name:android.intent.action.EDIT+action:name:android.intent.action.PICK+action:name:android.intent.action.SEND+action:name:android.intent.action.VIEW+category:name:android.intent.category.DEFAULT+data:mimeType:image/jpeg
+ADDED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:15:13-22:29
+	tools:ignore
+		ADDED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:15:28-58
+action#android.intent.action.VIEW
+ADDED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:16:17-69
+	android:name
+		ADDED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:16:25-66
+action#android.intent.action.EDIT
+ADDED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:17:17-69
+	android:name
+		ADDED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:17:25-66
+action#android.intent.action.PICK
+ADDED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:18:17-69
+	android:name
+		ADDED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:18:25-66
+action#android.intent.action.SEND
+ADDED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:19:17-68
+	android:name
+		ADDED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:19:25-66
+category#android.intent.category.DEFAULT
+ADDED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:20:17-76
+	android:name
+		ADDED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:20:27-73
+data
+ADDED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:21:17-55
+	android:mimeType
+		ADDED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:21:23-52
+activity#com.flir.flironeexampleapplication.GLPreviewActivity
+ADDED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:24:9-45:20
+	android:screenOrientation
+		ADDED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:26:13-49
+	android:label
+		ADDED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:28:13-45
+	android:launchMode
+		ADDED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:29:13-44
+	android:configChanges
+		ADDED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:27:13-74
+	android:theme
+		ADDED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:30:13-51
+	android:name
+		ADDED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:25:13-46
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:31:13-35:29
+action#android.intent.action.MAIN
+ADDED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:32:17-69
+	android:name
+		ADDED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:32:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:34:17-77
+	android:name
+		ADDED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:34:27-74
+intent-filter#action:name:android.hardware.usb.action.USB_DEVICE_ATTACHED+action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:38:13-42:29
+action#android.hardware.usb.action.USB_DEVICE_ATTACHED
+ADDED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:40:17-90
+	android:name
+		ADDED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:40:25-87
+meta-data#android.hardware.usb.action.USB_DEVICE_ATTACHED
+ADDED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:43:13-44:64
+	android:resource
+		ADDED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:44:24-61
+	android:name
+		ADDED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:43:24-86
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:48:5-80
+	android:name
+		ADDED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:48:22-78
+uses-permission#android.permission.INTERNET
+ADDED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:49:5-66
+MERGED from [:flironesdk:] /Users/weiminding/.gradle/caches/transforms-1/files-1.1/flironesdk.aar/90151ebbce1de68aafc07928a3680fb2/AndroidManifest.xml:12:5-67
+MERGED from [:flironesdk:] /Users/weiminding/.gradle/caches/transforms-1/files-1.1/flironesdk.aar/90151ebbce1de68aafc07928a3680fb2/AndroidManifest.xml:12:5-67
+	android:name
+		ADDED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml:49:22-64
+uses-sdk
+INJECTED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml
+INJECTED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml
+MERGED from [:flironesdk:] /Users/weiminding/.gradle/caches/transforms-1/files-1.1/flironesdk.aar/90151ebbce1de68aafc07928a3680fb2/AndroidManifest.xml:7:5-9:41
+MERGED from [:flironesdk:] /Users/weiminding/.gradle/caches/transforms-1/files-1.1/flironesdk.aar/90151ebbce1de68aafc07928a3680fb2/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/weiminding/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/74f6c51a74819b5460b6cac3001b87e1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/weiminding/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/74f6c51a74819b5460b6cac3001b87e1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] /Users/weiminding/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/c67344773e42ec8387c0aa9a468891ac/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] /Users/weiminding/.gradle/caches/transforms-1/files-1.1/support-v4-27.1.1.aar/c67344773e42ec8387c0aa9a468891ac/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /Users/weiminding/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/b24d8893fea576eedb13b3a4787fa00a/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /Users/weiminding/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/b24d8893fea576eedb13b3a4787fa00a/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/weiminding/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/b0be5c2c10c07f781fb924cadd4e90a6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/weiminding/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/b0be5c2c10c07f781fb924cadd4e90a6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/weiminding/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/c834a55ceb1cdcf2b9de5eafd481b698/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/weiminding/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/c834a55ceb1cdcf2b9de5eafd481b698/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/weiminding/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/2f3ffc0c4c4edc6a5bad561285ba4367/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/weiminding/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/2f3ffc0c4c4edc6a5bad561285ba4367/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/weiminding/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/1fe96e1bf3ab18975390be5c3ab464e8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/weiminding/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/1fe96e1bf3ab18975390be5c3ab464e8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/weiminding/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/147dd9eb6ccf87c8871345d774a04ab5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/weiminding/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/147dd9eb6ccf87c8871345d774a04ab5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /Users/weiminding/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/cc601b75eab0010b04d2100cc161021a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /Users/weiminding/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.1.aar/cc601b75eab0010b04d2100cc161021a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /Users/weiminding/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/cc0c6069929476700ce3d9a2e079847e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /Users/weiminding/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/cc0c6069929476700ce3d9a2e079847e/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/weiminding/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/735e184c29a0af243896d4d45e14fce1/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/weiminding/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/735e184c29a0af243896d4d45e14fce1/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/weiminding/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/aa36e3b2c9052c2025f38d5ac888dbf1/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/weiminding/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/aa36e3b2c9052c2025f38d5ac888dbf1/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/weiminding/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/0248bf5eee9b4667ee31203065573d14/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/weiminding/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/0248bf5eee9b4667ee31203065573d14/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /Users/weiminding/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/6f79e027358fe2f213cafdd7192f5000/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /Users/weiminding/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/6f79e027358fe2f213cafdd7192f5000/AndroidManifest.xml:20:5-44
+INJECTED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml
+INJECTED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml
+		ADDED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml
+		ADDED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/weiminding/Projects/GitHub/FLIR-Thermal-Image/FLIROneSDKBundle/FLIRONEExampleApplication/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.CAMERA
+ADDED from [:flironesdk:] /Users/weiminding/.gradle/caches/transforms-1/files-1.1/flironesdk.aar/90151ebbce1de68aafc07928a3680fb2/AndroidManifest.xml:11:5-65
+	android:name
+		ADDED from [:flironesdk:] /Users/weiminding/.gradle/caches/transforms-1/files-1.1/flironesdk.aar/90151ebbce1de68aafc07928a3680fb2/AndroidManifest.xml:11:22-62
