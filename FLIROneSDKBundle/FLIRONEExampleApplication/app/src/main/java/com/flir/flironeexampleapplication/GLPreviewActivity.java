@@ -3,13 +3,13 @@ package com.flir.flironeexampleapplication;
 import android.Manifest;
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.ColorFilter;
-import android.media.MediaScannerConnection;
-import android.net.Uri;
 import android.opengl.GLSurfaceView;
 import android.os.Build;
 import android.os.Bundle;
@@ -25,6 +25,7 @@ import android.view.ScaleGestureDetector;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -39,8 +40,12 @@ import com.flir.flironesdk.FrameProcessor;
 import com.flir.flironesdk.RenderedImage;
 import com.flir.flironesdk.SimulatedDevice;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.IOException;
+import java.io.OutputStream;
 import java.net.Socket;
+import java.nio.ByteBuffer;
 import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -280,7 +285,17 @@ public class GLPreviewActivity extends Activity implements Device.Delegate, Fram
                 }
             });
         } else {
-            this.thermalBitmap = renderedImage.getBitmap();
+            Log.e("TRA", "log file "+ renderedImage.thermalPixelData().toString());
+            if (thermalBitmap == null){
+                thermalBitmap = renderedImage.getBitmap();
+            } else {
+                try {
+                    renderedImage.copyToBitmap(thermalBitmap);
+                } catch (IllegalArgumentException e){
+                    thermalBitmap = renderedImage.getBitmap();
+                }
+            }
+            this.imageCaptureRequested = true;
         }
 
         /*
@@ -299,22 +314,63 @@ public class GLPreviewActivity extends Activity implements Device.Delegate, Fram
                         lastSavedPath = path+ "/" + fileName;
                         renderedImage.getFrame().save(new File(lastSavedPath), frameProcessor);
 
-                        MediaScannerConnection.scanFile(context,
-                                new String[]{path + "/" + fileName}, null,
-                                new MediaScannerConnection.OnScanCompletedListener() {
-                                    @Override
-                                    public void onScanCompleted(String path, Uri uri) {
-                                        Log.i("ExternalStorage", "Scanned " + path + ":");
-                                        Log.i("ExternalStorage", "-> uri=" + uri);
-                                    }
-
-                                });
+//                        MediaScannerConnection.scanFile(context,
+//                                new String[]{path + "/" + fileName}, null,
+//                                new MediaScannerConnection.OnScanCompletedListener() {
+//                                    @Override
+//                                    public void onScanCompleted(String path, Uri uri) {
+//                                        Log.i("ExternalStorage", "Scanned " + path + ":");
+//                                        Log.i("ExternalStorage", "-> uri=" + uri);
+//                                    }
+//
+//                                });
 
                     }catch (Exception e){
                         e.printStackTrace();
                     }
                 }
             }).start();
+        }
+
+        if (streamSocket != null && streamSocket.isConnected()){
+            try {
+                // send PNG file over socket in another thread
+                final OutputStream outputStream = streamSocket.getOutputStream();
+                // make a output stream so we can get the size of the PNG
+                final ByteArrayOutputStream bufferStream = new ByteArrayOutputStream();
+
+                thermalBitmap.compress(Bitmap.CompressFormat.WEBP, 100, bufferStream);
+                bufferStream.flush();
+                (new Thread() {
+                    @Override
+                    public void run() {
+                        super.run();
+                        try {
+                            /*
+                             * Header is 6 bytes indicating the length of the image data and rotation
+                             * of the device
+                             * This could be expanded upon by adding bytes to have more metadata
+                             * such as image format
+                             */
+                            byte[] headerBytes = ByteBuffer.allocate((Integer.SIZE + Short.SIZE) / 8).putInt(bufferStream.size()).putShort((short)deviceRotation).array();
+                            synchronized (streamSocket) {
+                                outputStream.write(headerBytes);
+                                bufferStream.writeTo(outputStream);
+                                outputStream.flush();
+                            }
+                            bufferStream.close();
+
+
+                        } catch (IOException ex) {
+                            Log.e("STREAM", "Error sending frame: " + ex.toString());
+                        }
+                    }
+                }).start();
+            } catch (Exception ex){
+                Log.e("STREAM", "Error creating PNG: "+ex.getMessage());
+
+            }
+
         }
     }
 
@@ -359,6 +415,7 @@ public class GLPreviewActivity extends Activity implements Device.Delegate, Fram
             this.imageCaptureRequested = true;
         }
     }
+
     public void onConnectSimClicked(View v){
         if(flirOneDevice == null){
             try {
@@ -375,6 +432,7 @@ public class GLPreviewActivity extends Activity implements Device.Delegate, Fram
             flirOneDevice = null;
         }
     }
+
 
     public void onSimulatedChargeCableToggleClicked(View v){
         if(flirOneDevice instanceof SimulatedDevice){
@@ -437,6 +495,70 @@ public class GLPreviewActivity extends Activity implements Device.Delegate, Fram
         frameProcessor.setVividIrEnabled(button.isChecked());
     }
 
+    /**
+     * Example method of starting/stopping a frame stream to a host
+     * @param v The toggle button pushed
+     */
+    public void onNetStreamClicked(View v){
+        final ToggleButton button = (ToggleButton)v;
+        button.setChecked(false);
+
+        if (streamSocket == null || streamSocket.isClosed()){
+            AlertDialog.Builder alert = new AlertDialog.Builder(this);
+
+            alert.setTitle("Start Network Stream");
+            alert.setMessage("Provide hostname:port to connect");
+
+            // Set an EditText view to get user input
+            final EditText input = new EditText(this);
+
+            alert.setView(input);
+
+            alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int whichButton) {
+                    String value = input.getText().toString();
+                    final String[] parts = value.split(":");
+                    (new Thread(){
+                        @Override
+                        public void run() {
+                            super.run();
+                            try {
+                                streamSocket = new Socket(parts[0], Integer.parseInt(parts[1], 10));
+                                runOnUiThread(new Thread(){
+                                    @Override
+                                    public void run() {
+                                        super.run();
+                                        button.setChecked(streamSocket.isConnected());
+                                    }
+                                });
+
+                            }catch (Exception ex){
+                                Log.e("CONNECT",ex.getMessage());
+                            }
+                        }
+                    }).start();
+
+                }
+            });
+
+            alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int whichButton) {
+                    // Canceled.
+                }
+            });
+
+            alert.show();
+        }else{
+            try {
+                streamSocket.close();
+            }catch (Exception ex){
+
+            }
+            button.setChecked(streamSocket != null && streamSocket.isConnected());
+        }
+    }
+
+
     @Override
     protected void onStart(){
         super.onStart();
@@ -470,6 +592,7 @@ public class GLPreviewActivity extends Activity implements Device.Delegate, Fram
         RenderedImage.ImageType defaultImageType = RenderedImage.ImageType.BlendedMSXRGBA8888Image;
         frameProcessor = new FrameProcessor(this, this, EnumSet.of(defaultImageType), true);
         frameProcessor.setGLOutputMode(defaultImageType);
+        frameProcessor.setImagePalette(RenderedImage.Palette.Iron);
 
         thermalSurfaceView = (GLSurfaceView) findViewById(R.id.imageView);
         thermalSurfaceView.setPreserveEGLContextOnPause(true);
@@ -509,7 +632,7 @@ public class GLPreviewActivity extends Activity implements Device.Delegate, Fram
         ListView paletteListView = ((ListView)findViewById(R.id.paletteListView));
         paletteListView.setDivider(null);
         paletteListView.setAdapter(new ArrayAdapter<>(this, R.layout.emptytextview, RenderedImage.Palette.values()));
-        paletteListView.setSelection(frameProcessor.getImagePalette().ordinal());
+        paletteListView.setSelection(2);
         paletteListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -518,6 +641,7 @@ public class GLPreviewActivity extends Activity implements Device.Delegate, Fram
                 }
             }
         });
+
         // Set up an instance of SystemUiHider to control the system UI for
         // this activity.
 

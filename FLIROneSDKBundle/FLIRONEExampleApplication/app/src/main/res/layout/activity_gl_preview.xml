@@ -85,15 +85,24 @@
                 android:visibility="invisible"
                 android:onClick="onSimulatedChargeCableToggleClicked" />
 
+            <!--<ToggleButton-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:id="@+id/vividButton"-->
+                <!--style="?metaButtonBarButtonStyle"-->
+                <!--android:textOff="@string/normal"-->
+                <!--android:textOn="@string/vivid"-->
+                <!--android:checked="true"-->
+                <!--android:onClick="onVividClicked"/>-->
+
             <ToggleButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/vividButton"
+                android:id="@+id/streamButton"
                 style="?metaButtonBarButtonStyle"
-                android:textOff="@string/normal"
-                android:textOn="@string/vivid"
-                android:checked="true"
-                android:onClick="onVividClicked"/>
+                android:textOff="@string/startNetStream"
+                android:textOn="@string/stopNetStream"
+                android:onClick="onNetStreamClicked"/>
 
             <Button
                 android:layout_width="51dp" style="?metaButtonBarButtonStyle"
