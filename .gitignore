@@ -1,0 +1,8 @@
+FLIROneSDKBundle/FLIRONEExampleApplication/*.iml
+FLIROneSDKBundle/FLIRONEExampleApplication/.gradle/
+FLIROneSDKBundle/FLIRONEExampleApplication/local.properties
+FLIROneSDKBundle/FLIRONEExampleApplication/.idea/libraries
+FLIROneSDKBundle/FLIRONEExampleApplication/.idea/modules.xml
+FLIROneSDKBundle/FLIRONEExampleApplication/.idea/workspace.xml
+FLIROneSDKBundle/FLIRONEExampleApplication/.DS_Store
+FLIROneSDKBundle/FLIRONEExampleApplication/app/build/
