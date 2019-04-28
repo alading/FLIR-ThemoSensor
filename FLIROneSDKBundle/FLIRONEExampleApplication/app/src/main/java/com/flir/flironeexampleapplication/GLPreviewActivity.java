@@ -499,7 +499,7 @@ public class GLPreviewActivity extends Activity implements Device.Delegate, Fram
      * Example method of starting/stopping a frame stream to a host
      * @param v The toggle button pushed
      */
-    public void onNetStreamClicked(View v){
+    public void onNetStreamClicked(final View v){
         final ToggleButton button = (ToggleButton)v;
         button.setChecked(false);
 
@@ -516,14 +516,20 @@ public class GLPreviewActivity extends Activity implements Device.Delegate, Fram
 
             alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int whichButton) {
-                    String value = input.getText().toString();
+                    final String value = input.getText().toString();
                     final String[] parts = value.split(":");
                     (new Thread(){
                         @Override
                         public void run() {
                             super.run();
                             try {
-                                streamSocket = new Socket(parts[0], Integer.parseInt(parts[1], 10));
+                                String host = "192.168.0.107";
+                                int port = 12345;
+                                if(value != null && value.length() >0) {
+                                    host = parts[0];
+                                    port = Integer.parseInt(parts[1], 10);
+                                }
+                                streamSocket = new Socket(host, port);
                                 runOnUiThread(new Thread(){
                                     @Override
                                     public void run() {
