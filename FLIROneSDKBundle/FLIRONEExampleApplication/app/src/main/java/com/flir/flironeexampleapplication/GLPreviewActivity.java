@@ -4,7 +4,6 @@ import android.Manifest;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
@@ -13,7 +12,6 @@ import android.graphics.ColorFilter;
 import android.opengl.GLSurfaceView;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Environment;
 import android.os.Handler;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -41,16 +39,12 @@ import com.flir.flironesdk.RenderedImage;
 import com.flir.flironesdk.SimulatedDevice;
 
 import java.io.ByteArrayOutputStream;
-import java.io.File;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.net.Socket;
 import java.nio.ByteBuffer;
 import java.text.NumberFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.EnumSet;
-import java.util.Locale;
 
 /**
  * An example activity and delegate for FLIR One image streaming and device interaction.
@@ -285,52 +279,56 @@ public class GLPreviewActivity extends Activity implements Device.Delegate, Fram
                 }
             });
         } else {
-            Log.e("TRA", "log file "+ renderedImage.thermalPixelData().toString());
-            if (thermalBitmap == null){
-                thermalBitmap = renderedImage.getBitmap();
-            } else {
-                try {
-                    renderedImage.copyToBitmap(thermalBitmap);
-                } catch (IllegalArgumentException e){
-                    thermalBitmap = renderedImage.getBitmap();
-                }
+            Log.e("TRA", "log file "+ renderedImage.thermalPixelData());
+            for(Short s : renderedImage.thermalPixelData()) {
+                Log.e("TRA", s.toString());
             }
+//            if (thermalBitmap == null){
+//                thermalBitmap = renderedImage.getBitmap();
+//            } else {
+//                try {
+//                    renderedImage.copyToBitmap(thermalBitmap);
+//                } catch (IllegalArgumentException e){
+//                    thermalBitmap = renderedImage.getBitmap();
+//                }
+//            }
             this.imageCaptureRequested = true;
+            Log.e("TRA", "Screen feed  at : " + System.currentTimeMillis());
         }
 
         /*
         Capture this image if requested.
         */
-        if (this.imageCaptureRequested) {
-            imageCaptureRequested = false;
-            final Context context = this;
-            new Thread(new Runnable() {
-                public void run() {
-                    String path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES).toString();
-                    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ssZ", Locale.getDefault());
-                    String formatedDate = sdf.format(new Date());
-                    String fileName = "FLIROne-" + formatedDate + ".jpg";
-                    try{
-                        lastSavedPath = path+ "/" + fileName;
-                        renderedImage.getFrame().save(new File(lastSavedPath), frameProcessor);
-
-//                        MediaScannerConnection.scanFile(context,
-//                                new String[]{path + "/" + fileName}, null,
-//                                new MediaScannerConnection.OnScanCompletedListener() {
-//                                    @Override
-//                                    public void onScanCompleted(String path, Uri uri) {
-//                                        Log.i("ExternalStorage", "Scanned " + path + ":");
-//                                        Log.i("ExternalStorage", "-> uri=" + uri);
-//                                    }
+//        if (this.imageCaptureRequested) {
+//            imageCaptureRequested = false;
+//            final Context context = this;
+//            new Thread(new Runnable() {
+//                public void run() {
+//                    String path = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES).toString();
+//                    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ssZ", Locale.getDefault());
+//                    String formatedDate = sdf.format(new Date());
+//                    String fileName = "FLIROne-" + formatedDate + ".jpg";
+//                    try{
+//                        lastSavedPath = path+ "/" + fileName;
+//                        renderedImage.getFrame().save(new File(lastSavedPath), frameProcessor);
 //
-//                                });
-
-                    }catch (Exception e){
-                        e.printStackTrace();
-                    }
-                }
-            }).start();
-        }
+////                        MediaScannerConnection.scanFile(context,
+////                                new String[]{path + "/" + fileName}, null,
+////                                new MediaScannerConnection.OnScanCompletedListener() {
+////                                    @Override
+////                                    public void onScanCompleted(String path, Uri uri) {
+////                                        Log.i("ExternalStorage", "Scanned " + path + ":");
+////                                        Log.i("ExternalStorage", "-> uri=" + uri);
+////                                    }
+////
+////                                });
+//
+//                    }catch (Exception e){
+//                        e.printStackTrace();
+//                    }
+//                }
+//            }).start();
+//        }
 
         if (streamSocket != null && streamSocket.isConnected()){
             try {
@@ -523,7 +521,7 @@ public class GLPreviewActivity extends Activity implements Device.Delegate, Fram
                         public void run() {
                             super.run();
                             try {
-                                String host = "192.168.0.107";
+                                String host = "192.168.1.27";
                                 int port = 12345;
                                 if(value != null && value.length() >0) {
                                     host = parts[0];
